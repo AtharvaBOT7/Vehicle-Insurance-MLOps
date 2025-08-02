@@ -1,0 +1,7 @@
+In this file, I have written the order in which I have executed the project.
+
+Steps:
+1. Create project template by executing the template.py file.
+2. Write the code on setup.py and project.toml file to import the local packages.
+3. Create virtual env, activate and install the install the requirements from requirements.txt (In this project we will use Python version 3.10)
+4. Check if all the packages have been installed properly.
