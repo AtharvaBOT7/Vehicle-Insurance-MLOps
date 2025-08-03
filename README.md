@@ -1,5 +1,5 @@
 # Vehicle-Insurance-MLOps
-This project will us predict if a person is eligible to get an insurance against his/her car with his current credentials
+This project will target the customers who are most likely to get an insurance from our Vehicle Insurance Company.
 
 ### 📊 Dataset Description – Vehicle Insurance Customer Data
 
