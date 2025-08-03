@@ -3,6 +3,7 @@ environment.txt
 mongodetails.txt
 mongo_demo.ipynb
 logs
+notebook/rf_model.pkl
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
