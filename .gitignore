@@ -4,7 +4,7 @@ mongodetails.txt
 mongo_demo.ipynb
 logs
 notebook/rf_model.pkl
-atrifact
+artifact
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
