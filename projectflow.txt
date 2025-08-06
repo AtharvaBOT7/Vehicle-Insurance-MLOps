@@ -23,6 +23,15 @@ Steps:
 15. Write the exception file and test it on demo.py
 16. EDA and Feature Engg notebook added.
 
+*** IMPORTANT ***
+You might have observed that each and every folder contains a __init__.py file, this is because we have created our local src folder as a 
+package and these folder are present inside the src folder and to import the functions present inside the other src folders, we have initialised
+the folders with an __init__.py file so that we can access the functions in any of the files from any other folder/files present.
+
+*** IMPORTANT ***
+We have created a folder named constants in the src folder because if we want to access any value which is same across the project like database name or login credentials, 
+then we will just import it from there instead of defining it everytime we use.
+
 ----------------------------------------------- Data Ingestion -----------------------------------------------
 17. Before we work on "Data Ingestion" component >> Declare variables within constants.__init__.py file >> 
     add code to configuration.mongo_db_connections.py file and define the func for mondodb connection >> 
