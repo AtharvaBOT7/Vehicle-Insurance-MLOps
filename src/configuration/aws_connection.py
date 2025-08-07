@@ -1,23 +1,28 @@
 import boto3
 import os
 from src.constants import AWS_SECRET_ACCESS_KEY_ENV_KEY, AWS_ACCESS_KEY_ID_ENV_KEY, REGION_NAME
-
+from dotenv import load_dotenv
+load_dotenv()
 
 class S3Client:
 
     s3_client=None
     s3_resource = None
     def __init__(self, region_name=REGION_NAME):
+
+        from dotenv import load_dotenv
+        import os
+        load_dotenv()
         """ 
         This Class gets aws credentials from env_variable and creates an connection with s3 bucket 
         and raise exception when environment variable is not set
         """
 
         if S3Client.s3_resource==None or S3Client.s3_client==None:
-            __access_key_id = os.getenv(AWS_ACCESS_KEY_ID_ENV_KEY, )
-            __secret_access_key = os.getenv(AWS_SECRET_ACCESS_KEY_ENV_KEY, )
+            __access_key_id = AWS_ACCESS_KEY_ID_ENV_KEY
+            __secret_access_key = AWS_SECRET_ACCESS_KEY_ENV_KEY
             if __access_key_id is None:
-                raise Exception(f"Environment variable: {AWS_ACCESS_KEY_ID_ENV_KEY} is not not set.")
+                raise Exception(f"Environment variable: {AWS_ACCESS_KEY_ID_ENV_KEY} is not set.")
             if __secret_access_key is None:
                 raise Exception(f"Environment variable: {AWS_SECRET_ACCESS_KEY_ENV_KEY} is not set.")
         

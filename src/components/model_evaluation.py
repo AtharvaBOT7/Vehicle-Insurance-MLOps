@@ -5,11 +5,13 @@ from src.exception import MyException
 from src.constants import TARGET_COLUMN
 from src.logger import logging
 from src.utils.main_utils import load_object
+from src import constants
 import sys
 import pandas as pd
 from typing import Optional
 from src.entity.s3_estimator import Proj1Estimator
 from dataclasses import dataclass
+
 
 @dataclass
 class EvaluateModelResponse:
@@ -23,6 +25,10 @@ class ModelEvaluation:
 
     def __init__(self, model_eval_config: ModelEvaluationConfig, data_ingestion_artifact: DataIngestionArtifact,
                  model_trainer_artifact: ModelTrainerArtifact):
+        from dotenv import load_dotenv
+        import os 
+
+        load_dotenv()
         try:
             self.model_eval_config = model_eval_config
             self.data_ingestion_artifact = data_ingestion_artifact

@@ -54,11 +54,19 @@ class ModelTrainerConfig:
 
 @dataclass
 class ModelEvaluationConfig:
+    from dotenv import load_dotenv
+    import os 
+
+    load_dotenv()
     changed_threshold_score: float = MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE
     bucket_name: str = MODEL_BUCKET_NAME
     s3_model_key_path: str = MODEL_FILE_NAME
 
 @dataclass
 class ModelPusherConfig:
+    from dotenv import load_dotenv
+    import os 
+
+    load_dotenv()
     bucket_name: str = MODEL_BUCKET_NAME
     s3_model_key_path: str = MODEL_FILE_NAME
