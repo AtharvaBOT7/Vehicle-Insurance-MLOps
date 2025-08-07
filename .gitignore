@@ -5,6 +5,7 @@ mongo_demo.ipynb
 logs
 notebook/rf_model.pkl
 artifact
+firstproj_accessKeys.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
