@@ -124,55 +124,76 @@ Use it as a template to scale to other supervised learning problems.
 
 ## ⚡ Quickstart — Run Locally
 
-1) **Clone the repository**
-
+1. **Clone the repository**
+    ```bash
     git clone https://github.com/<your-username>/vehicle-insurance-ml.git
     cd vehicle-insurance-ml
+    ```
 
-2) **Create & activate a virtual environment (Python 3.10)**
-
+2. **Create & activate a virtual environment (Python 3.10)**
+    ```bash
     python3 -m venv venv
-    # macOS / Linux
+    ```
+    **macOS / Linux**
+    ```bash
     source venv/bin/activate
-    # Windows (Powershell)
+    ```
+    **Windows (PowerShell)**
+    ```powershell
     venv\Scripts\Activate.ps1
+    ```
 
-3) **Install dependencies**
-
+3. **Install dependencies**
+    ```bash
     pip install -r requirements.txt
+    ```
 
-4) **Set environment variables** (use a `.env` file or export manually)
+4. **Set environment variables** (use a `.env` file or export manually)  
 
-    # .env (recommended)
+    **`.env` file example:**
+    ```env
     MONGODB_URL=mongodb+srv://<username>:<password>@cluster.mongodb.net/<db>?retryWrites=true&w=majority
     AWS_ACCESS_KEY_ID=<your_access_key>
     AWS_SECRET_ACCESS_KEY=<your_secret_key>
     AWS_DEFAULT_REGION=us-east-1
     MODEL_BUCKET_NAME=my-model-mlopsproj
+    ```
 
-    # Or export (macOS/Linux)
+    **Or export (macOS/Linux)**
+    ```bash
     export MONGODB_URL="..."
     export AWS_ACCESS_KEY_ID="..."
     export AWS_SECRET_ACCESS_KEY="..."
     export AWS_DEFAULT_REGION="us-east-1"
     export MODEL_BUCKET_NAME="my-model-mlopsproj"
+    ```
 
-5) **(Optional) Run the training pipeline**
-
+5. **(Optional) Run the training pipeline**
+    ```bash
     python demo.py
-    # or, if your training orchestrator is in src/pipeline/training_pipeline.py
-    # python -m src.pipeline.training_pipeline
+    ```
+    **Or, if your training orchestrator is in `src/pipeline/training_pipeline.py`:**
+    ```bash
+    python -m src.pipeline.training_pipeline
+    ```
 
-6) **Start the web app**
+6. **Start the web app**  
 
-    # FastAPI example if you use uvicorn:
-    # uvicorn app:app --host 0.0.0.0 --port 5000 --reload
+    **Using FastAPI with Uvicorn:**
+    ```bash
+    uvicorn app:app --host 0.0.0.0 --port 5000 --reload
+    ```
 
-    # If your app.py runs directly:
+    **If `app.py` runs directly:**
+    ```bash
     python app.py
+    ```
 
-    # Open in browser:
-    # http://127.0.0.1:5000  (or the port you configured)
+    **Open in browser:**
+    ```
+    http://127.0.0.1:5000
+    ```
+    *(or the port you configured)*
 
 ---
 
