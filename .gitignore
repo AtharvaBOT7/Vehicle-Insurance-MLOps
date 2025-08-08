@@ -6,6 +6,7 @@ logs
 notebook/rf_model.pkl
 artifact
 firstproj_accessKeys.csv
+proj1key.pem
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
